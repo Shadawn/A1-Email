@@ -1,0 +1,679 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.10">
+	<CommandBarLocation>Top</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ОтправитьПисьмо" id="1">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<SkipOnInput>false</SkipOnInput>
+				<CommandName>0</CommandName>
+				<ExtendedTooltip name="ОтправитьПисьмоExtendedTooltip" id="49"/>
+			</Button>
+			<Button name="ФормаСформироватьПоШаблону" id="106">
+				<Type>CommandBarButton</Type>
+				<CommandName>0</CommandName>
+				<ExtendedTooltip name="ФормаСформироватьПоШаблонуРасширеннаяПодсказка" id="107"/>
+			</Button>
+			<Button name="Справка" id="27">
+				<Type>CommandBarButton</Type>
+				<SkipOnInput>false</SkipOnInput>
+				<CommandName>0</CommandName>
+				<ExtendedTooltip name="СправкаExtendedTooltip" id="50"/>
+			</Button>
+			<Button name="ФормаСохранитьКакШаблон" id="108">
+				<Type>CommandBarButton</Type>
+				<CommandName>0</CommandName>
+				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="ФормаСохранитьКакШаблонРасширеннаяПодсказка" id="109"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<ChildItems>
+		<InputField name="УчетнаяЗапись" id="76">
+			<ChoiceParameters>
+				<app:item name="Отбор.ИспользоватьДляОтправки">
+					<app:value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation/>
+						<Value xsi:type="xs:boolean">true</Value>
+					</app:value>
+				</app:item>
+				<app:item name="Отбор.ПометкаУдаления">
+					<app:value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation/>
+						<Value xsi:type="xs:boolean">false</Value>
+					</app:value>
+				</app:item>
+			</ChoiceParameters>
+			<ContextMenu name="УчетнаяЗаписьКонтекстноеМеню" id="77"/>
+			<ExtendedTooltip name="УчетнаяЗаписьРасширеннаяПодсказка" id="78"/>
+		</InputField>
+		<UsualGroup name="ОсновнаяГруппаТелаПисьма" id="10" DisplayImportance="VeryHigh">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Основная группа тела письма</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ОсновнаяГруппаТелаПисьмаExtendedTooltip" id="51"/>
+			<ChildItems>
+				<Table name="ПочтовыеАдресаПолучателей" id="87" DisplayImportance="VeryHigh">
+					<Representation>List</Representation>
+					<HeightInTableRows>3</HeightInTableRows>
+					<Header>false</Header>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<FileDragMode>AsFile</FileDragMode>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Почтовые адреса получателей</v8:content>
+						</v8:item>
+					</Title>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="ПочтовыеАдресаПолучателейКонтекстноеМеню" id="88"/>
+					<AutoCommandBar name="ПочтовыеАдресаПолучателейКоманднаяПанель" id="89">
+						<Autofill>false</Autofill>
+					</AutoCommandBar>
+					<ExtendedTooltip name="ПочтовыеАдресаПолучателейРасширеннаяПодсказка" id="90"/>
+					<SearchStringAddition name="ПочтовыеАдресаПолучателейСтрокаПоиска" id="91">
+						<AdditionSource>
+							<Item>ПочтовыеАдресаПолучателей</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ПочтовыеАдресаПолучателейСтрокаПоискаКонтекстноеМеню" id="92"/>
+						<ExtendedTooltip name="ПочтовыеАдресаПолучателейСтрокаПоискаРасширеннаяПодсказка" id="93"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ПочтовыеАдресаПолучателейСостояниеПросмотра" id="94">
+						<AdditionSource>
+							<Item>ПочтовыеАдресаПолучателей</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ПочтовыеАдресаПолучателейСостояниеПросмотраКонтекстноеМеню" id="95"/>
+						<ExtendedTooltip name="ПочтовыеАдресаПолучателейСостояниеПросмотраРасширеннаяПодсказка" id="96"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ПочтовыеАдресаПолучателейУправлениеПоиском" id="97">
+						<AdditionSource>
+							<Item>ПочтовыеАдресаПолучателей</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ПочтовыеАдресаПолучателейУправлениеПоискомКонтекстноеМеню" id="98"/>
+						<ExtendedTooltip name="ПочтовыеАдресаПолучателейУправлениеПоискомРасширеннаяПодсказка" id="99"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<InputField name="ПочтовыйАдресПолучателейВариантОтправки" id="100">
+							<EditMode>Directly</EditMode>
+							<Width>12</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ListChoiceMode>true</ListChoiceMode>
+							<AutoChoiceIncomplete>true</AutoChoiceIncomplete>
+							<ChooseType>false</ChooseType>
+							<IncompleteChoiceMode>OnActivate</IncompleteChoiceMode>
+							<TextEdit>false</TextEdit>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Кому:</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">Кому:</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Копия:</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">Копия:</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Скрытая копия:</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">Скрытая копия:</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="ПочтовыйАдресПолучателейВариантОтправкиКонтекстноеМеню" id="101"/>
+							<ExtendedTooltip name="ПочтовыйАдресПолучателейВариантОтправкиРасширеннаяПодсказка" id="102"/>
+						</InputField>
+						<InputField name="ПочтовыйАдресПолучателейПредставление" id="110">
+							<EditMode>EnterOnInput</EditMode>
+							<Width>40</Width>
+							<ChooseType>false</ChooseType>
+							<ContextMenu name="ПочтовыйАдресПолучателейПредставлениеКонтекстноеМеню" id="111"/>
+							<ExtendedTooltip name="ПочтовыйАдресПолучателейПредставлениеРасширеннаяПодсказка" id="112"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+				<InputField name="ТемаПисьма" id="11">
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тема отправляемого сообщения</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Width>60</Width>
+					<Wrap>false</Wrap>
+					<ContextMenu name="ТемаПисьмаКонтекстноеМеню" id="12"/>
+					<ExtendedTooltip name="ТемаПисьмаExtendedTooltip" id="53"/>
+				</InputField>
+				<CommandBar name="КоманднаяПанельФорматирование" id="79">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Командная панель форматирование</v8:content>
+						</v8:item>
+					</Title>
+					<CommandSource>Item.ТелоПисьма</CommandSource>
+					<ExtendedTooltip name="КоманднаяПанельФорматированиеРасширеннаяПодсказка" id="80"/>
+				</CommandBar>
+				<FormattedDocumentField name="ТелоПисьма" id="22">
+					<TitleLocation>None</TitleLocation>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тело сообщения</v8:content>
+						</v8:item>
+					</ToolTip>
+					<AutoMaxHeight>false</AutoMaxHeight>
+					<ContextMenu name="ТелоПисьмаКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="ТелоПисьмаExtendedTooltip" id="54"/>
+				</FormattedDocumentField>
+				<UsualGroup name="ГруппаВложения" id="21">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вложения</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаВложенияExtendedTooltip" id="55"/>
+					<ChildItems>
+						<Table name="Вложения" id="13">
+							<Representation>List</Representation>
+							<SkipOnInput>false</SkipOnInput>
+							<HeightInTableRows>2</HeightInTableRows>
+							<SelectionMode>SingleRow</SelectionMode>
+							<Header>false</Header>
+							<HorizontalScrollBar>DontUse</HorizontalScrollBar>
+							<HorizontalLines>false</HorizontalLines>
+							<VerticalLines>false</VerticalLines>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableDrag>true</EnableDrag>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Вложить</v8:content>
+								</v8:item>
+							</Title>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ВложенияКонтекстноеМеню" id="14">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<ButtonGroup name="ГруппаПриложитьФайл" id="45">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Приложить файл</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ГруппаПриложитьФайлExtendedTooltip" id="56"/>
+										<ChildItems>
+											<Button name="КонтекстноеМенюВложенияПриложитьФайл" id="44">
+												<Type>CommandBarButton</Type>
+												<SkipOnInput>false</SkipOnInput>
+												<CommandName>0</CommandName>
+												<ExtendedTooltip name="КонтекстноеМенюВложенияПриложитьФайлExtendedTooltip" id="57"/>
+											</Button>
+											<Button name="КонтекстноеМенюВложенияУдалить" id="43">
+												<Type>CommandBarButton</Type>
+												<SkipOnInput>false</SkipOnInput>
+												<CommandName>0</CommandName>
+												<ExtendedTooltip name="КонтекстноеМенюВложенияУдалитьExtendedTooltip" id="58"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+									<Button name="КонтекстноеМенюВложенияОткрытьФайл" id="46">
+										<Type>CommandBarButton</Type>
+										<SkipOnInput>false</SkipOnInput>
+										<CommandName>0</CommandName>
+										<ExtendedTooltip name="КонтекстноеМенюВложенияОткрытьФайлExtendedTooltip" id="59"/>
+									</Button>
+								</ChildItems>
+							</ContextMenu>
+							<AutoCommandBar name="ВложенияКоманднаяПанель" id="15">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="ПриложитьФайл" id="40">
+										<Type>CommandBarButton</Type>
+										<SkipOnInput>false</SkipOnInput>
+										<CommandName>0</CommandName>
+										<ExtendedTooltip name="ПриложитьФайлExtendedTooltip" id="60"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ВложенияExtendedTooltip" id="61"/>
+							<SearchStringAddition name="ВложенияСтрокаПоиска" id="67">
+								<AdditionSource>
+									<Item>Вложения</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ВложенияСтрокаПоискаКонтекстноеМеню" id="68"/>
+								<ExtendedTooltip name="ВложенияСтрокаПоискаРасширеннаяПодсказка" id="69"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ВложенияСостояниеПросмотра" id="70">
+								<AdditionSource>
+									<Item>Вложения</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ВложенияСостояниеПросмотраКонтекстноеМеню" id="71"/>
+								<ExtendedTooltip name="ВложенияСостояниеПросмотраРасширеннаяПодсказка" id="72"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ВложенияУправлениеПоиском" id="73">
+								<AdditionSource>
+									<Item>Вложения</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ВложенияУправлениеПоискомКонтекстноеМеню" id="74"/>
+								<ExtendedTooltip name="ВложенияУправлениеПоискомРасширеннаяПодсказка" id="75"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="Вложение1" id="34">
+									<ReadOnly>true</ReadOnly>
+									<Wrap>false</Wrap>
+									<ContextMenu name="Вложение1КонтекстноеМеню" id="35">
+										<Autofill>false</Autofill>
+									</ContextMenu>
+									<ExtendedTooltip name="Вложение1ExtendedTooltip" id="62"/>
+								</InputField>
+								<InputField name="Вложение2" id="36">
+									<ReadOnly>true</ReadOnly>
+									<Wrap>false</Wrap>
+									<ContextMenu name="Вложение2КонтекстноеМеню" id="37">
+										<Autofill>false</Autofill>
+									</ContextMenu>
+									<ExtendedTooltip name="Вложение2ExtendedTooltip" id="63"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+				<InputField name="АдресОтвета" id="47">
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Введите адрес электронной почты на который вы хотите получить ответ на это письмо</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Wrap>false</Wrap>
+					<ContextMenu name="АдресОтветаКонтекстноеМеню" id="48"/>
+					<ExtendedTooltip name="АдресОтветаExtendedTooltip" id="66"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes/>
+	<BaseForm version="2.10">
+		<CommandBarLocation>Top</CommandBarLocation>
+		<VerticalScroll>useIfNecessary</VerticalScroll>
+		<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+			<ChildItems>
+				<Button name="ОтправитьПисьмо" id="1">
+					<Type>CommandBarButton</Type>
+					<DefaultButton>true</DefaultButton>
+					<SkipOnInput>false</SkipOnInput>
+					<CommandName>0</CommandName>
+					<ExtendedTooltip name="ОтправитьПисьмоExtendedTooltip" id="49"/>
+				</Button>
+				<Button name="ФормаСформироватьПоШаблону" id="106">
+					<Type>CommandBarButton</Type>
+					<CommandName>0</CommandName>
+					<ExtendedTooltip name="ФормаСформироватьПоШаблонуРасширеннаяПодсказка" id="107"/>
+				</Button>
+				<Button name="Справка" id="27">
+					<Type>CommandBarButton</Type>
+					<SkipOnInput>false</SkipOnInput>
+					<CommandName>0</CommandName>
+					<ExtendedTooltip name="СправкаExtendedTooltip" id="50"/>
+				</Button>
+				<Button name="ФормаСохранитьКакШаблон" id="108">
+					<Type>CommandBarButton</Type>
+					<CommandName>0</CommandName>
+					<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+					<ExtendedTooltip name="ФормаСохранитьКакШаблонРасширеннаяПодсказка" id="109"/>
+				</Button>
+			</ChildItems>
+		</AutoCommandBar>
+		<ChildItems>
+			<InputField name="УчетнаяЗапись" id="76">
+				<ChoiceParameters>
+					<app:item name="Отбор.ИспользоватьДляОтправки">
+						<app:value xsi:type="FormChoiceListDesTimeValue">
+							<Presentation/>
+							<Value xsi:type="xs:boolean">true</Value>
+						</app:value>
+					</app:item>
+					<app:item name="Отбор.ПометкаУдаления">
+						<app:value xsi:type="FormChoiceListDesTimeValue">
+							<Presentation/>
+							<Value xsi:type="xs:boolean">false</Value>
+						</app:value>
+					</app:item>
+				</ChoiceParameters>
+				<ContextMenu name="УчетнаяЗаписьКонтекстноеМеню" id="77"/>
+				<ExtendedTooltip name="УчетнаяЗаписьРасширеннаяПодсказка" id="78"/>
+			</InputField>
+			<UsualGroup name="ОсновнаяГруппаТелаПисьма" id="10" DisplayImportance="VeryHigh">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Основная группа тела письма</v8:content>
+					</v8:item>
+				</Title>
+				<Group>Vertical</Group>
+				<Representation>None</Representation>
+				<ShowTitle>false</ShowTitle>
+				<ExtendedTooltip name="ОсновнаяГруппаТелаПисьмаExtendedTooltip" id="51"/>
+				<ChildItems>
+					<Table name="ПочтовыеАдресаПолучателей" id="87" DisplayImportance="VeryHigh">
+						<Representation>List</Representation>
+						<HeightInTableRows>3</HeightInTableRows>
+						<Header>false</Header>
+						<EnableStartDrag>true</EnableStartDrag>
+						<EnableDrag>true</EnableDrag>
+						<FileDragMode>AsFile</FileDragMode>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Почтовые адреса получателей</v8:content>
+							</v8:item>
+						</Title>
+						<RowFilter xsi:nil="true"/>
+						<ContextMenu name="ПочтовыеАдресаПолучателейКонтекстноеМеню" id="88"/>
+						<AutoCommandBar name="ПочтовыеАдресаПолучателейКоманднаяПанель" id="89">
+							<Autofill>false</Autofill>
+						</AutoCommandBar>
+						<ExtendedTooltip name="ПочтовыеАдресаПолучателейРасширеннаяПодсказка" id="90"/>
+						<SearchStringAddition name="ПочтовыеАдресаПолучателейСтрокаПоиска" id="91">
+							<AdditionSource>
+								<Item>ПочтовыеАдресаПолучателей</Item>
+								<Type>SearchStringRepresentation</Type>
+							</AdditionSource>
+							<ContextMenu name="ПочтовыеАдресаПолучателейСтрокаПоискаКонтекстноеМеню" id="92"/>
+							<ExtendedTooltip name="ПочтовыеАдресаПолучателейСтрокаПоискаРасширеннаяПодсказка" id="93"/>
+						</SearchStringAddition>
+						<ViewStatusAddition name="ПочтовыеАдресаПолучателейСостояниеПросмотра" id="94">
+							<AdditionSource>
+								<Item>ПочтовыеАдресаПолучателей</Item>
+								<Type>ViewStatusRepresentation</Type>
+							</AdditionSource>
+							<ContextMenu name="ПочтовыеАдресаПолучателейСостояниеПросмотраКонтекстноеМеню" id="95"/>
+							<ExtendedTooltip name="ПочтовыеАдресаПолучателейСостояниеПросмотраРасширеннаяПодсказка" id="96"/>
+						</ViewStatusAddition>
+						<SearchControlAddition name="ПочтовыеАдресаПолучателейУправлениеПоиском" id="97">
+							<AdditionSource>
+								<Item>ПочтовыеАдресаПолучателей</Item>
+								<Type>SearchControl</Type>
+							</AdditionSource>
+							<ContextMenu name="ПочтовыеАдресаПолучателейУправлениеПоискомКонтекстноеМеню" id="98"/>
+							<ExtendedTooltip name="ПочтовыеАдресаПолучателейУправлениеПоискомРасширеннаяПодсказка" id="99"/>
+						</SearchControlAddition>
+						<ChildItems>
+							<InputField name="ПочтовыйАдресПолучателейВариантОтправки" id="100">
+								<EditMode>Directly</EditMode>
+								<Width>12</Width>
+								<HorizontalStretch>false</HorizontalStretch>
+								<ListChoiceMode>true</ListChoiceMode>
+								<AutoChoiceIncomplete>true</AutoChoiceIncomplete>
+								<ChooseType>false</ChooseType>
+								<IncompleteChoiceMode>OnActivate</IncompleteChoiceMode>
+								<TextEdit>false</TextEdit>
+								<ChoiceList>
+									<xr:Item>
+										<xr:Presentation/>
+										<xr:CheckState>0</xr:CheckState>
+										<xr:Value xsi:type="FormChoiceListDesTimeValue">
+											<Presentation>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Кому:</v8:content>
+												</v8:item>
+											</Presentation>
+											<Value xsi:type="xs:string">Кому:</Value>
+										</xr:Value>
+									</xr:Item>
+									<xr:Item>
+										<xr:Presentation/>
+										<xr:CheckState>0</xr:CheckState>
+										<xr:Value xsi:type="FormChoiceListDesTimeValue">
+											<Presentation>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Копия:</v8:content>
+												</v8:item>
+											</Presentation>
+											<Value xsi:type="xs:string">Копия:</Value>
+										</xr:Value>
+									</xr:Item>
+									<xr:Item>
+										<xr:Presentation/>
+										<xr:CheckState>0</xr:CheckState>
+										<xr:Value xsi:type="FormChoiceListDesTimeValue">
+											<Presentation>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Скрытая копия:</v8:content>
+												</v8:item>
+											</Presentation>
+											<Value xsi:type="xs:string">Скрытая копия:</Value>
+										</xr:Value>
+									</xr:Item>
+								</ChoiceList>
+								<ContextMenu name="ПочтовыйАдресПолучателейВариантОтправкиКонтекстноеМеню" id="101"/>
+								<ExtendedTooltip name="ПочтовыйАдресПолучателейВариантОтправкиРасширеннаяПодсказка" id="102"/>
+							</InputField>
+							<InputField name="ПочтовыйАдресПолучателейПредставление" id="110">
+								<EditMode>EnterOnInput</EditMode>
+								<Width>40</Width>
+								<ChooseType>false</ChooseType>
+								<ContextMenu name="ПочтовыйАдресПолучателейПредставлениеКонтекстноеМеню" id="111"/>
+								<ExtendedTooltip name="ПочтовыйАдресПолучателейПредставлениеРасширеннаяПодсказка" id="112"/>
+							</InputField>
+						</ChildItems>
+					</Table>
+					<InputField name="ТемаПисьма" id="11">
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Тема отправляемого сообщения</v8:content>
+							</v8:item>
+						</ToolTip>
+						<Width>60</Width>
+						<Wrap>false</Wrap>
+						<ContextMenu name="ТемаПисьмаКонтекстноеМеню" id="12"/>
+						<ExtendedTooltip name="ТемаПисьмаExtendedTooltip" id="53"/>
+					</InputField>
+					<CommandBar name="КоманднаяПанельФорматирование" id="79">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Командная панель форматирование</v8:content>
+							</v8:item>
+						</Title>
+						<CommandSource>Item.ТелоПисьма</CommandSource>
+						<ExtendedTooltip name="КоманднаяПанельФорматированиеРасширеннаяПодсказка" id="80"/>
+					</CommandBar>
+					<FormattedDocumentField name="ТелоПисьма" id="22">
+						<TitleLocation>None</TitleLocation>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Тело сообщения</v8:content>
+							</v8:item>
+						</ToolTip>
+						<AutoMaxHeight>false</AutoMaxHeight>
+						<ContextMenu name="ТелоПисьмаКонтекстноеМеню" id="23"/>
+						<ExtendedTooltip name="ТелоПисьмаExtendedTooltip" id="54"/>
+					</FormattedDocumentField>
+					<UsualGroup name="ГруппаВложения" id="21">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Вложения</v8:content>
+							</v8:item>
+						</Title>
+						<Group>Vertical</Group>
+						<Representation>None</Representation>
+						<ShowTitle>false</ShowTitle>
+						<ExtendedTooltip name="ГруппаВложенияExtendedTooltip" id="55"/>
+						<ChildItems>
+							<Table name="Вложения" id="13">
+								<Representation>List</Representation>
+								<SkipOnInput>false</SkipOnInput>
+								<HeightInTableRows>2</HeightInTableRows>
+								<SelectionMode>SingleRow</SelectionMode>
+								<Header>false</Header>
+								<HorizontalScrollBar>DontUse</HorizontalScrollBar>
+								<HorizontalLines>false</HorizontalLines>
+								<VerticalLines>false</VerticalLines>
+								<AutoInsertNewRow>true</AutoInsertNewRow>
+								<EnableDrag>true</EnableDrag>
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Вложить</v8:content>
+									</v8:item>
+								</Title>
+								<RowFilter xsi:nil="true"/>
+								<ContextMenu name="ВложенияКонтекстноеМеню" id="14">
+									<Autofill>false</Autofill>
+									<ChildItems>
+										<ButtonGroup name="ГруппаПриложитьФайл" id="45">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Приложить файл</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ГруппаПриложитьФайлExtendedTooltip" id="56"/>
+											<ChildItems>
+												<Button name="КонтекстноеМенюВложенияПриложитьФайл" id="44">
+													<Type>CommandBarButton</Type>
+													<SkipOnInput>false</SkipOnInput>
+													<CommandName>0</CommandName>
+													<ExtendedTooltip name="КонтекстноеМенюВложенияПриложитьФайлExtendedTooltip" id="57"/>
+												</Button>
+												<Button name="КонтекстноеМенюВложенияУдалить" id="43">
+													<Type>CommandBarButton</Type>
+													<SkipOnInput>false</SkipOnInput>
+													<CommandName>0</CommandName>
+													<ExtendedTooltip name="КонтекстноеМенюВложенияУдалитьExtendedTooltip" id="58"/>
+												</Button>
+											</ChildItems>
+										</ButtonGroup>
+										<Button name="КонтекстноеМенюВложенияОткрытьФайл" id="46">
+											<Type>CommandBarButton</Type>
+											<SkipOnInput>false</SkipOnInput>
+											<CommandName>0</CommandName>
+											<ExtendedTooltip name="КонтекстноеМенюВложенияОткрытьФайлExtendedTooltip" id="59"/>
+										</Button>
+									</ChildItems>
+								</ContextMenu>
+								<AutoCommandBar name="ВложенияКоманднаяПанель" id="15">
+									<Autofill>false</Autofill>
+									<ChildItems>
+										<Button name="ПриложитьФайл" id="40">
+											<Type>CommandBarButton</Type>
+											<SkipOnInput>false</SkipOnInput>
+											<CommandName>0</CommandName>
+											<ExtendedTooltip name="ПриложитьФайлExtendedTooltip" id="60"/>
+										</Button>
+									</ChildItems>
+								</AutoCommandBar>
+								<ExtendedTooltip name="ВложенияExtendedTooltip" id="61"/>
+								<SearchStringAddition name="ВложенияСтрокаПоиска" id="67">
+									<AdditionSource>
+										<Item>Вложения</Item>
+										<Type>SearchStringRepresentation</Type>
+									</AdditionSource>
+									<ContextMenu name="ВложенияСтрокаПоискаКонтекстноеМеню" id="68"/>
+									<ExtendedTooltip name="ВложенияСтрокаПоискаРасширеннаяПодсказка" id="69"/>
+								</SearchStringAddition>
+								<ViewStatusAddition name="ВложенияСостояниеПросмотра" id="70">
+									<AdditionSource>
+										<Item>Вложения</Item>
+										<Type>ViewStatusRepresentation</Type>
+									</AdditionSource>
+									<ContextMenu name="ВложенияСостояниеПросмотраКонтекстноеМеню" id="71"/>
+									<ExtendedTooltip name="ВложенияСостояниеПросмотраРасширеннаяПодсказка" id="72"/>
+								</ViewStatusAddition>
+								<SearchControlAddition name="ВложенияУправлениеПоиском" id="73">
+									<AdditionSource>
+										<Item>Вложения</Item>
+										<Type>SearchControl</Type>
+									</AdditionSource>
+									<ContextMenu name="ВложенияУправлениеПоискомКонтекстноеМеню" id="74"/>
+									<ExtendedTooltip name="ВложенияУправлениеПоискомРасширеннаяПодсказка" id="75"/>
+								</SearchControlAddition>
+								<ChildItems>
+									<InputField name="Вложение1" id="34">
+										<ReadOnly>true</ReadOnly>
+										<Wrap>false</Wrap>
+										<ContextMenu name="Вложение1КонтекстноеМеню" id="35">
+											<Autofill>false</Autofill>
+										</ContextMenu>
+										<ExtendedTooltip name="Вложение1ExtendedTooltip" id="62"/>
+									</InputField>
+									<InputField name="Вложение2" id="36">
+										<ReadOnly>true</ReadOnly>
+										<Wrap>false</Wrap>
+										<ContextMenu name="Вложение2КонтекстноеМеню" id="37">
+											<Autofill>false</Autofill>
+										</ContextMenu>
+										<ExtendedTooltip name="Вложение2ExtendedTooltip" id="63"/>
+									</InputField>
+								</ChildItems>
+							</Table>
+						</ChildItems>
+					</UsualGroup>
+					<InputField name="АдресОтвета" id="47">
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Введите адрес электронной почты на который вы хотите получить ответ на это письмо</v8:content>
+							</v8:item>
+						</ToolTip>
+						<Wrap>false</Wrap>
+						<ContextMenu name="АдресОтветаКонтекстноеМеню" id="48"/>
+						<ExtendedTooltip name="АдресОтветаExtendedTooltip" id="66"/>
+					</InputField>
+				</ChildItems>
+			</UsualGroup>
+		</ChildItems>
+		<Attributes/>
+	</BaseForm>
+</Form>
