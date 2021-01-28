@@ -32,21 +32,21 @@
 		<Event name="BeforeLoadDataFromSettingsAtServer">ПередЗагрузкойДанныхИзНастроекНаСервере</Event>
 	</Events>
 	<ChildItems>
-		<CommandBar name="ШаблонКоманднаяПанель" id="4">
+		<CommandBar name="ТелоКоманднаяПанель" id="4">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Шаблон командная панель</v8:content>
+					<v8:content>Тело командная панель</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Шаблон командная панель</v8:content>
+					<v8:content>Тело командная панель</v8:content>
 				</v8:item>
 			</ToolTip>
 			<CommandSource>Item.Тело</CommandSource>
-			<ExtendedTooltip name="ШаблонКоманднаяПанельРасширеннаяПодсказка" id="5"/>
+			<ExtendedTooltip name="ТелоКоманднаяПанельРасширеннаяПодсказка" id="5"/>
 		</CommandBar>
 		<FormattedDocumentField name="Тело" id="1">
 			<DataPath>Тело</DataPath>
